@@ -1,0 +1,18 @@
+A Django templatetag library for using Media instances in templates.
+
+If your template expects certain Javascript or CSS files, it can declare that
+using these tags, which create Media instances.
+
+See https://docs.djangoproject.com/en/dev/topics/forms/media/#media-objects
+
+There are two tags template_js and template_css . Their syntax is:
+
+{% media_js "Javascript filename" in template_variable_name %}
+
+This will add the javascript file given to a Media instance in the given
+context variable name. If that context variable doesn't exist, it's added and
+set to a new Media instance with just that javascript file.
+
+{% media_css "CSS media" "CSS filename" in template_variable_name %}
+
+Ditto above, but for CSS.
