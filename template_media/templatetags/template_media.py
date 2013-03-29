@@ -1,3 +1,6 @@
+# Based on examples in
+# https://docs.djangoproject.com/en/1.5/howto/custom-template-tags/
+
 import re
 
 from django import template
